@@ -33,6 +33,8 @@ $sg = new \SendGrid($apiKey);
 // Send OneTouch callback data via email.
 if ($bool_sendemail) {
     $response = $sg->client->mail()->send()->post($mail);
+} else {
+    echo $emailcontent;
 }
 
 ?>
